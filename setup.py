@@ -24,10 +24,15 @@ setup(
     packages=[
         "asmk",
     ],
-    ext_modules=[Extension("asmk.hamming", ["cython/hamming.c"])],
+    ext_modules=[Extension("asmk.hamming", ["cython/hamming.pyx"],
+        include_dirs=[
+            # existing includes
+            "cython",
+        ],)],
     install_requires=[
         "numpy",
         "pyaml",
+        "faiss-cpu"  # or ("faiss-gpu" optionally)
     ],
     cmdclass={
         "install": InstallWrapper,
