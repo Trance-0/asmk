@@ -7,9 +7,11 @@ name = "asmk"
 version = "0.1.0"
 description = "Python implementation of ASMK (Aggregated Selective Match Kernels)"
 authors = [
-  { name = "Zheyuan Wu" },
   { name = "Tomas Jenicek" },
   { name = "Giorgos Tolias" }
+]
+maintainers = [
+  { name = "Zheyuan Wu" }
 ]
 readme = "README.md"
 license = {text = "MIT"}
